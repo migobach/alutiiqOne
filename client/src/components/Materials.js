@@ -1,16 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Segment, Header } from 'semantic-ui-react'
 
-const Curriculum = () => (
-  <Segment>
+const Materials = () => (
+  <Segment padded>
     <Header
       textAlign="center"
       as="h2"
-      >
-      Alutiiq Language K-5 Curriculum Resources
+    >
+    Learning Materials
     </Header>
   </Segment>
 )
 
-export default Curriculum
+export default Materials

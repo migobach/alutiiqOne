@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Segment } from 'semantic-ui-react'
+import { Menu, Segment, MenuItem } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 class NavBar extends Component {
@@ -13,9 +13,42 @@ class NavBar extends Component {
     return(
       <div>
         <Menu pointing secondary>
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} as={Link} to='/' />
-          <Menu.Item name='curriculum' active={activeItem === 'curriculum'} onClick={this.handleItemClick} as={Link} to='/curriculum' />
-                      
+          <Menu.Item 
+            name='home'   
+            active={activeItem === 'home'} 
+            onClick={this.handleItemClick} 
+            as={Link} to='/' 
+          />
+          <Menu.Item 
+            name='curriculum' 
+            active={activeItem === 'curriculum'} 
+            onClick={this.handleItemClick} 
+            as={Link} to='/curriculum' 
+          />
+          <MenuItem
+            name='learning_materials'
+            active={activeItem === 'learning_materials'}
+            onClick={this.handleItemClick}
+            as={Link} to="/materials"
+          />     
+          <MenuItem
+            name='dictionary'
+            active={activeItem === 'dictionary'}
+            onClick={this.handleItemClick}
+            as={Link} to="/dictionary"
+          />  
+           <MenuItem
+            name='songs'
+            active={activeItem === 'songs'}
+            onClick={this.handleItemClick}
+            as={Link} to="/songs"
+          />  
+           <MenuItem
+            name='classes'
+            active={activeItem === 'classes'}
+            onClick={this.handleItemClick}
+            as={Link} to="/classes"
+          />        
         </Menu>
       </div>
     )
@@ -25,33 +58,3 @@ class NavBar extends Component {
 export default NavBar
 
 // Making this a class so that when somebody is in a section, like the dictionary, the menu will conditionally render... Not quite there yet though. 
-
-
-    // return (
-    //   <div>
-    //     <Menu pointing secondary>
-    //       <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-    //       <Menu.Item
-    //         name='messages'
-    //         active={activeItem === 'messages'}
-    //         onClick={this.handleItemClick}
-    //       />
-    //       <Menu.Item
-    //         name='friends'
-    //         active={activeItem === 'friends'}
-    //         onClick={this.handleItemClick}
-    //       />
-    //       <Menu.Menu position='right'>
-    //         <Menu.Item
-    //           name='logout'
-    //           active={activeItem === 'logout'}
-    //           onClick={this.handleItemClick}
-    //         />
-    //       </Menu.Menu>
-    //     </Menu>
-
-    //     <Segment>
-    //       <img src='/assets/images/wireframe/media-paragraph.png' />
-    //     </Segment>
-    //   </div>
-    // )

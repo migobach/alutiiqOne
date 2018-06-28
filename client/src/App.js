@@ -8,6 +8,7 @@ import Materials from './components/Materials'
 import Dictionary from './components/Dictionary'
 import Songs from './components/Songs'
 import Classes from './components/Classes'
+import HistoryNews from './components/HistoryNews'
 
 
 
@@ -22,6 +23,7 @@ const App = () => (
       <Route exact path="/dictionary" component={Dictionary} />
       <Route exact path="/songs" component={Songs} />
       <Route exact path="/classes" component={Classes} />
+      <Route exact path="/happenings" component={HistoryNews} />
 
 
       <Route component={NoMatch} />

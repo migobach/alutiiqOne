@@ -2,13 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { 
   Segment, 
-  Header,
-  Image,
+  Card,
+  Icon,
 } from 'semantic-ui-react'
 import { Parallax, Background } from 'react-parallax'
 import Banner from '../images/harbor.jpg'
 
-const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
+const insideStyles = {
+  background: 'white', 
+  padding: 20, 
+  position: 'absolute', 
+  top: '30%', 
+  left: '50%', 
+  transform: 'translate(-50%,-50%)'
+  }
 
 
 const Home = () => (
@@ -22,13 +29,47 @@ const Home = () => (
         <div style={insideStyles}>Learn the Alutiiq Language</div>
       </div>
     </Parallax>
-  
-    <Header
-      textAlign="center"
-      as="h2"
-    >
-    Alutiiq Language Draft
-    </Header>
+
+    <Segment>
+      <Card.Group itemsPerRow={3} stackable={true}>
+        <Card>
+          <Card.Content header>
+            Here is sample one
+          </Card.Content>
+          <Card.Content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida lorem tellus, a suscipit nunc faucibus vitae. Ut vestibulum bibendum feugiat. Mauris a turpis finibus, auctor eros at, ultrices massa. Nulla maximus, nibh eget tristique faucibus, nibh justo luctus risus, at pulvinar odio nunc ac urna. Donec accumsan metus eu orci eleifend, non pretium ex cursus. Nullam vitae diam a lorem malesuada scelerisque. Ut pharetra arcu velit, eu scelerisque nisi consectetur eget. Nam sollicitudin ante non sem fermentum, ac sagittis magna efficitur. Nam facilisis metus eget elit mattis, nec pharetra diam volutpat. Nulla facilisi. Donec tincidunt risus vitae ante porttitor aliquet. Nulla finibus at lorem pretium sagittis.
+          </Card.Content>
+          <Card.Content extra>
+            <Icon name='linkify' />
+          </Card.Content>
+        </Card>
+
+        <Card>
+          <Card.Content header>
+            Here is sample two
+          </Card.Content>
+          <Card.Content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida lorem tellus, a suscipit nunc faucibus vitae. Ut vestibulum bibendum feugiat. Mauris a turpis finibus, auctor eros at, ultrices massa. Nulla maximus, nibh eget tristique faucibus, nibh justo luctus risus, at pulvinar odio nunc ac urna. Donec accumsan metus eu orci eleifend, non pretium ex cursus. Nullam vitae diam a lorem malesuada scelerisque. Ut pharetra arcu velit, eu scelerisque nisi consectetur eget. Nam sollicitudin ante non sem fermentum, ac sagittis magna efficitur. Nam facilisis metus eget elit mattis, nec pharetra diam volutpat. Nulla facilisi. Donec tincidunt risus vitae ante porttitor aliquet. Nulla finibus at lorem pretium sagittis.
+          </Card.Content>
+          <Card.Content extra>
+            <Icon name='linkify' />
+          </Card.Content>
+        </Card>
+
+        <Card>
+          <Card.Content header>
+            Here is sample thre
+          </Card.Content>
+          <Card.Content>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida lorem tellus, a suscipit nunc faucibus vitae. Ut vestibulum bibendum feugiat. Mauris a turpis finibus, auctor eros at, ultrices massa. Nulla maximus, nibh eget tristique faucibus, nibh justo luctus risus, at pulvinar odio nunc ac urna. Donec accumsan metus eu orci eleifend, non pretium ex cursus. Nullam vitae diam a lorem malesuada scelerisque. Ut pharetra arcu velit, eu scelerisque nisi consectetur eget. Nam sollicitudin ante non sem fermentum, ac sagittis magna efficitur. Nam facilisis metus eget elit mattis, nec pharetra diam volutpat. Nulla facilisi. Donec tincidunt risus vitae ante porttitor aliquet. Nulla finibus at lorem pretium sagittis.
+          </Card.Content>
+          <Card.Content extra>
+            <Icon name='linkify' />
+          </Card.Content>
+        </Card>
+
+      </Card.Group>
+    </Segment>
 
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ex sit amet ligula ultrices, et commodo metus venenatis. Fusce sit amet feugiat leo, sit amet iaculis orci. Donec fringilla dui nec tortor semper, at rhoncus dui interdum. Fusce eu massa tortor. Morbi nec risus tellus. Fusce tempus nulla ut elit lobortis bibendum. Nullam fringilla lorem at facilisis ullamcorper.
@@ -47,40 +88,6 @@ const Home = () => (
       </p>
   </div>
 
-
 )
 
 export default Home
-
-
-// import { Parallax, Background } from 'react-parallax';
-
-// const MyComponent = () => (
-//   <div>
-//     <Parallax
-//       blur={10}
-//       bgImage={require('path/to/image.jpg')}
-//       bgImageAlt="the cat"
-//       strength={200}
-//     >
-//       Put some text content here
-//       or even an empty div with fixed dimensions
-//       to have a height for the parallax.
-//       <div style={{ height: '200px' }} />
-//     </Parallax>
-//     <Parallax
-//       blur={{ min: -15, max: 15 }}
-//       bgImage={require('path/to/another/image.jpg')}
-//       bgImageAlt="the dog"
-//       strength={200}
-//     >
-//       Blur transition from min to max
-//       <div style={{ height: '200px' }} />
-//     </Parallax>
-//     <Parallax strength={300}>
-//       <div>Use the background component for custom elements</div>
-//       <Background className="custom-bg">
-//         <img src="http://www.fillmurray.com/500/320" alt="fill murray" />
-//       </Background>
-//     </Parallax>
-//   </div>
